@@ -10,12 +10,10 @@ public class Starter {
 
         try {
             String answer = generator.helloMessage("FIRST");
-//            String answer = generator.helloMessage("SECOND");
-//            String answer = generator.helloMessage("OTHER");
+            //String answer = generator.helloMessage("SECOND");
+            //String answer = generator.helloMessage("OTHER");
             System.out.println("Answer 1:" + answer);
-        } catch (FirstException ex) {
-            System.out.println("Error message:" + ex.getMessage());
-        } catch (SecondException ex) {
+        } catch (FirstException | SecondException ex) {
             System.out.println("Error message:" + ex.getMessage());
         }
     }
