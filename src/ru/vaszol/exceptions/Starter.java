@@ -13,7 +13,11 @@ public class Starter {
             //String answer = generator.helloMessage("SECOND");
             //String answer = generator.helloMessage("OTHER");
             System.out.println("Answer 1:" + answer);
-        } catch (FirstException | SecondException ex) {
+        } catch (FirstException ex) {
+            System.out.println("Error message:" + ex.getMessage());
+        } catch (SecondException ex) {
+            System.out.println("Error message:" + ex.getMessage());
+        } catch (Exception ex) {
             System.out.println("Error message:" + ex.getMessage());
         }
     }
